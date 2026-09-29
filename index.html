@@ -170,14 +170,6 @@
       gap: 1.25rem;
       margin-top: 1.5rem;
     }
-    .results-grid-centered {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .results-grid-centered .result-card {
-      flex: 0 1 280px;
-    }
     .result-card {
       background: var(--card-bg);
       border-radius: 10px;
@@ -255,7 +247,6 @@
       .hero .subtitle { font-size: 1rem; }
       .authors { gap: 1rem 1.5rem; }
       .results-grid { grid-template-columns: 1fr; }
-      .results-grid-centered .result-card { flex-basis: 100%; }
     }
   </style>
 </head>
@@ -424,6 +415,31 @@
       </div>
     </div>
 
+    <p class="results-sub">Pose Estimation Variation</p>
+    <div class="results-grid">
+      <div class="result-card">
+        <video muted loop playsinline preload="metadata"
+               onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0;">
+          <source src="videos/Sphere-Trimmed.mp4" type="video/mp4">
+        </video>
+        <div class="card-label">Noisy Ground Truth</div>
+      </div>
+      <div class="result-card">
+        <video muted loop playsinline preload="metadata"
+               onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0;">
+          <source src="videos/Sphere-AprilTag-Trimmed.mp4" type="video/mp4">
+        </video>
+        <div class="card-label">AprilTag</div>
+      </div>
+      <div class="result-card">
+        <video muted loop playsinline preload="metadata"
+               onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0;">
+          <source src="videos/Sphere-FoundationPose-Trimmed.mp4" type="video/mp4">
+        </video>
+        <div class="card-label">FoundationPose</div>
+      </div>
+    </div>
+
     <p class="results-sub">Adaptive Regrasp</p>
     <div class="results-grid">
       <div class="result-card">
@@ -446,31 +462,6 @@
           <source src="videos/Regrasp-3.mp4" type="video/mp4">
         </video>
         <div class="card-label">Regrasp Example 3</div>
-      </div>
-    </div>
-
-    <p class="results-sub">Pose Estimation Variation</p>
-    <div class="results-grid results-grid-centered">
-      <div class="result-card">
-        <video muted loop playsinline preload="metadata"
-               onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0;">
-          <source src="videos/Sphere-Trimmed.mp4" type="video/mp4">
-        </video>
-        <div class="card-label">Noisy Ground Truth</div>
-      </div>
-      <div class="result-card">
-        <video muted loop playsinline preload="metadata"
-               onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0;">
-          <source src="videos/Sphere-AprilTag-Trimmed.mp4" type="video/mp4">
-        </video>
-        <div class="card-label">AprilTag</div>
-      </div>
-      <div class="result-card">
-        <video muted loop playsinline preload="metadata"
-               onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0;">
-          <source src="videos/Sphere-FoundationPose-Trimmed.mp4" type="video/mp4">
-        </video>
-        <div class="card-label">FoundationPose</div>
       </div>
     </div>
   </div>
